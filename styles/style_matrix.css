@@ -293,7 +293,7 @@ textarea::placeholder{
         width: 340px;
         height: 100%;
         padding: 30px;
-        overflow: scroll;
+        overflow: auto;
     }
 
     .conteudo__resultado__instrucoes{
