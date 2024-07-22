@@ -48,9 +48,6 @@ iframe{
     align-items: center;
     justify-content: space-between;
     overflow: auto;
-    scrollbar-arrow-color: transparent;
-    scrollbar-base-color: transparent;
-    scrollbar-color: white;
 }
 
 .conteudo__logo__estilo{
@@ -247,10 +244,6 @@ textarea::placeholder{
     font-family: var(--font-main);
     color: var(--font-color-cabecalho-rodape);
     font-size: 16px;
-}
-
-.rodape__texto__github{
-    
 }
 
 /*Desktop*/
