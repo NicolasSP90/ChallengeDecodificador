@@ -48,6 +48,9 @@ iframe{
     align-items: center;
     justify-content: space-between;
     overflow: auto;
+    scrollbar-arrow-color: transparent;
+    scrollbar-base-color: transparent;
+    scrollbar-color: white;
 }
 
 .conteudo__logo__estilo{
@@ -66,6 +69,9 @@ iframe{
     flex-direction: column;
     gap: 16px;
     overflow: auto;
+    scrollbar-arrow-color: transparent;
+    scrollbar-base-color: transparent;
+    scrollbar-color: white;
 }
 
 .conteudo__texto__input{
@@ -162,6 +168,9 @@ textarea::placeholder{
     border: 1px solid white;
     border-radius: 30px;
     overflow: auto;
+    scrollbar-arrow-color: transparent;
+    scrollbar-base-color: transparent;
+    scrollbar-color: white;
 }
 
 .conteudo__resultado__logo{
@@ -183,6 +192,9 @@ textarea::placeholder{
     line-height: 150%;
     outline: none;
     overflow: auto;
+    scrollbar-arrow-color: transparent;
+    scrollbar-base-color: transparent;
+    scrollbar-color: white;
 }
 
 .conteudo__resultado__instrucoes{
@@ -278,6 +290,9 @@ textarea::placeholder{
         width: 680px;
         padding: 125px 0px 0px 0px;
         overflow: auto;
+        scrollbar-arrow-color: transparent;
+        scrollbar-base-color: transparent;
+        scrollbar-color: white;
     }
 
     .conteudo__texto__input{
@@ -294,6 +309,10 @@ textarea::placeholder{
         height: 100%;
         padding: 30px;
         overflow: auto;
+        scrollbar-arrow-color: transparent;
+        scrollbar-base-color: transparent;
+        scrollbar-color: white;
+        
     }
 
     .conteudo__resultado__instrucoes{
