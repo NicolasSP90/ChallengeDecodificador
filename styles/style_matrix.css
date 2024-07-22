@@ -47,7 +47,7 @@ iframe{
     display: flex;
     align-items: center;
     justify-content: space-between;
-    overflow: scroll;
+    overflow: auto;
 }
 
 .conteudo__logo__estilo{
@@ -65,7 +65,7 @@ iframe{
     align-items: center;
     flex-direction: column;
     gap: 16px;
-    overflow: scroll;
+    overflow: auto;
 }
 
 .conteudo__texto__input{
@@ -161,7 +161,7 @@ textarea::placeholder{
     gap: 30px;
     border: 1px solid white;
     border-radius: 30px;
-    overflow: scroll;
+    overflow: auto;
 }
 
 .conteudo__resultado__logo{
@@ -182,7 +182,7 @@ textarea::placeholder{
     resize: none;
     line-height: 150%;
     outline: none;
-    overflow-y: scroll;
+    overflow: auto;
 }
 
 .conteudo__resultado__instrucoes{
@@ -277,7 +277,7 @@ textarea::placeholder{
     .conteudo__texto{
         width: 680px;
         padding: 125px 0px 0px 0px;
-        overflow: scroll;
+        overflow: auto;
     }
 
     .conteudo__texto__input{
