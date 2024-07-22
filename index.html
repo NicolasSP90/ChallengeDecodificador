@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link id="theme-stylesheet" rel="stylesheet" href="styles/style_matrix.css">
+    <link id="theme-stylesheet-color" rel="stylesheet" href="styles/style_colors_matrix.css">
+    <link id="hidden_visual" rel="stylesheet" href="styles/style_start.css">
+    <title>Alura Challenge - Decodificador de Texto</title>
+</head>
+
+<iframe src="https://rezmason.github.io/matrix/?skipIntro=false" frameborder="0" style="overflow:hidden;height:100%;width:100%" height="100%" width="100%"> ></iframe>
+
+<body>
+    <header class="cabecalho">
+        <h1 class="cabecalho__titulo">Alura Challenge - Decodificador de Texto</h1>        
+    </header>
+    
+    <main class="conteudo">
+        <div class="conteudo__logo">
+            <div class="conteudo__logo__icones">
+                <img class="conteudo__logo__icones__alura" src="assets/Logo_Alura.png" alt="Logo_Alura" hidden>
+                
+                <img class="conteudo__logo__icones__one" src="assets/Logo_ONE.svg" alt="Logo_ONE">
+            </div>
+
+            <button onclick="takePill()" class="conteudo__logo__estilo">
+                <img class="conteudo__logo__estilo__imagem" id="pill" src="assets/Pill_Blue.png" alt="Blue_Pill"></button>            
+        </div>
+
+        <section class="conteudo__texto">
+            <textarea class="conteudo__texto__input" id="input" type="text" placeholder="Digite seu texto"></textarea>
+                
+            <div class="conteudo__texto__alerta">
+                <img class="conteudo__texto__alerta__imagem" src="assets/Exclamation_Circle_Matrix.png" alt="Exclamation_Circle">
+                <p class="conteudo__texto__alerta__texto">Apenas letras minúsculas e sem acento.</p>
+            </div>
+            <div class="conteudo__texto__botoes">
+                <button onclick="criptografar()" class="conteudo__texto__botoes__criptografar">Criptografar</button>
+
+                <button onclick="descriptografar()" class="conteudo__texto__botoes__descriptografar">Descriptografar</button>
+            </div>
+        </section>
+        
+        <section class="conteudo__resultado" id="resultado">
+            <p class="conteudo__resultado__resposta" id="resposta"></p>
+
+            <img class="conteudo__resultado__logo" id="resultado__logo" src="assets/Logo_Decodificador_Matrix.jpg" alt="Logo_Decodificador">
+
+            <div class="conteudo__resultado__instrucoes" id="instrucoes">
+                <h1 class="conteudo__resultado__instrucoes__titulo">Nenhuma mensagem encontrada</h1>
+
+                <p class="conteudo__resultado__instrucoes__texto">Digite um texto que você deseja criptografar ou descriptografar.</p>
+            </div>
+
+            <button onclick="copiarEresetar()" class="conteudo__resultado__botao" id="copiar">Copiar</button>
+        </section>
+    </main>
+    
+    <footer class="rodape">
+        <a class="rodape__texto" href="https://github.com/NicolasSP90">Desenvolvido por Nícolas Sartor Parisotto | 2024</a>
+    </footer>
+    
+    <script src="app.js" defer></script>
+</body>
+</html>
