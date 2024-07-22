@@ -10,7 +10,7 @@
     <title>Alura Challenge - Decodificador de Texto</title>
 </head>
 
-<iframe src="https://rezmason.github.io/matrix/?skipIntro=false" frameborder="0" style="overflow:hidden;height:100%;width:100%" height="100%" width="100%"> ></iframe>
+<iframe id="matrix" src="https://rezmason.github.io/matrix/?skipIntro=false" frameborder="0" style="overflow:hidden;height:100%;width:100%" height="100%" width="100%"> ></iframe>
 
 <body>
     <header class="cabecalho">
@@ -20,20 +20,22 @@
     <main class="conteudo">
         <div class="conteudo__logo">
             <div class="conteudo__logo__icones">
-                <img class="conteudo__logo__icones__alura" src="assets/Logo_Alura.png" alt="Logo_Alura" hidden>
-                
-                <img class="conteudo__logo__icones__one" src="assets/Logo_ONE.svg" alt="Logo_ONE">
+                <img class="conteudo__logo__icones__one" id="logo_one" src="assets/Logo_ONE.svg" alt="Logo_ONE">
+
+                <img class="conteudo__logo__icones__alura" id="logo_alura" src="assets/Logo_Alura.png" alt="Logo_Alura" hidden>
             </div>
 
             <button onclick="takePill()" class="conteudo__logo__estilo">
-                <img class="conteudo__logo__estilo__imagem" id="pill" src="assets/Pill_Blue.png" alt="Blue_Pill"></button>            
+                <img class="conteudo__logo__estilo__imagem" id="takePill" src="assets/Morpheus_Pills.png" alt="Red_Pill">
+            
+            </button>           
         </div>
 
         <section class="conteudo__texto">
             <textarea class="conteudo__texto__input" id="input" type="text" placeholder="Digite seu texto"></textarea>
                 
             <div class="conteudo__texto__alerta">
-                <img class="conteudo__texto__alerta__imagem" src="assets/Exclamation_Circle_Matrix.png" alt="Exclamation_Circle">
+                <img class="conteudo__texto__alerta__imagem" id="alerta_excalamacao" src="assets/Exclamation_Circle_Matrix.png" alt="Exclamation_Circle">
                 <p class="conteudo__texto__alerta__texto">Apenas letras minúsculas e sem acento.</p>
             </div>
             <div class="conteudo__texto__botoes">

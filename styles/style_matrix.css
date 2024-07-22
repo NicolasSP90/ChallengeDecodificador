@@ -47,7 +47,6 @@ iframe{
     display: flex;
     align-items: center;
     justify-content: space-between;
-    overflow: auto;
 }
 
 .conteudo__logo__estilo{
@@ -55,8 +54,18 @@ iframe{
     display: flex;
     justify-content: center;
     align-items: center;
-    border: 1px solid blue;
-    border-radius: 10%;
+    cursor: pointer;
+}
+
+.conteudo__logo__estilo__imagem{
+    opacity: 0.75;
+    border: 1px solid var(--border-change);
+    border-radius: 20px;
+}
+
+.conteudo__logo__estilo__imagem:hover{
+    background-color: var(--background-hover-change);
+    transition: background-color 1s;
 }
 
 .conteudo__texto{
@@ -66,28 +75,24 @@ iframe{
     flex-direction: column;
     gap: 16px;
     overflow: auto;
-    scrollbar-arrow-color: transparent;
-    scrollbar-base-color: transparent;
-    scrollbar-color: white;
 }
 
 .conteudo__texto__input{
-    background-color: transparent;
+    background: var(--background-input);
     font-family: var(--font-main);
     font-size: 32px;
     color: var(--font-color-input);
     width: 100%;
-    border: 1px solid white;
+    border: 1px solid var(--border-input);
     border-radius: 20px;
     resize: none;
     line-height: 150%;
     outline: none;
-    padding: 5px;
+    padding: 20px;
 }
 
 textarea::placeholder{
     color: var(--font-color-input);
-    background-color: transparent;
     opacity: 1;
 }
 
@@ -124,35 +129,38 @@ textarea::placeholder{
 .conteudo__resultado__botao{
     font-size: 16px;
     font-family: var(--font-main);
-    border-radius: 24px;
+    border-radius: 20px;
     width: 330px;
     height: 60px;
     min-height: 60px;
     display: flex;
     align-items: center;
     justify-content: center;
+    cursor: pointer;
 }
 
 .conteudo__texto__botoes__criptografar{
     color: var(--font-color-criptografar);
-    background-color: transparent;
     border: 1px solid var(--border-criptografar);
+    background: var(--background-criptografar);
 }
 
 .conteudo__texto__botoes__criptografar:hover{
     background-color: var(--background-hover-criptografar);
     opacity: 0.75;
+    transition: background-color 1s;
 }
 
 .conteudo__texto__botoes__descriptografar{
     color: var(--font-color-decriptografar);
-    background-color: transparent;
+    background: var(--background-descriptografar);
     border: 1px solid var(--border-decriptografar);
 }
 
 .conteudo__texto__botoes__descriptografar:hover{
     background-color: var(--background-hover-descriptografar);
     opacity: 0.75;
+    transition: background-color 1s;
 }
 
 .conteudo__resultado{
@@ -163,11 +171,9 @@ textarea::placeholder{
     background-color: var(--background-resposta);
     gap: 30px;
     border: 1px solid white;
-    border-radius: 30px;
+    border-radius: 20px;
     overflow: auto;
-    scrollbar-arrow-color: transparent;
-    scrollbar-base-color: transparent;
-    scrollbar-color: white;
+    padding: 20px;
 }
 
 .conteudo__resultado__logo{
@@ -189,9 +195,6 @@ textarea::placeholder{
     line-height: 150%;
     outline: none;
     overflow: auto;
-    scrollbar-arrow-color: transparent;
-    scrollbar-base-color: transparent;
-    scrollbar-color: white;
 }
 
 .conteudo__resultado__instrucoes{
@@ -220,13 +223,14 @@ textarea::placeholder{
 
 .conteudo__resultado__botao{
     color: var(--font-color-copiar);
-    background-color: transparent;
+    background: var(--background-copiar);
     border: 1px solid var(--border-copiar);
 }
 
 .conteudo__resultado__botao:hover{
     background-color: var(--background-hover-copiar);
     opacity: 0.75;
+    transition: background-color 1s;
 }
 
 .rodape{
@@ -244,6 +248,7 @@ textarea::placeholder{
     font-family: var(--font-main);
     color: var(--font-color-cabecalho-rodape);
     font-size: 16px;
+    cursor: pointer;
 }
 
 /*Desktop*/
@@ -276,16 +281,13 @@ textarea::placeholder{
 
     .conteudo__logo__estilo__imagem{
         width: 100%;
-        border-radius: 10%;
+        border-radius: 20px;
     }
 
     .conteudo__texto{
         width: 680px;
         padding: 125px 0px 0px 0px;
         overflow: auto;
-        scrollbar-arrow-color: transparent;
-        scrollbar-base-color: transparent;
-        scrollbar-color: white;
     }
 
     .conteudo__texto__input{
@@ -300,12 +302,7 @@ textarea::placeholder{
     .conteudo__resultado{
         width: 340px;
         height: 100%;
-        padding: 30px;
-        overflow: auto;
-        scrollbar-arrow-color: transparent;
-        scrollbar-base-color: transparent;
-        scrollbar-color: white;
-        
+        overflow: auto;    
     }
 
     .conteudo__resultado__instrucoes{
@@ -340,8 +337,8 @@ textarea::placeholder{
 
     .conteudo__logo{
         flex-direction: row;
-        min-height: 50px;
         height: 10%;
+        min-height: 50px;
     }
 
     .conteudo__logo__icones{
@@ -358,7 +355,7 @@ textarea::placeholder{
 
     .conteudo__logo__estilo__imagem{
         height: 100%;
-        border-radius: 10%;
+        border-radius: 20px;
     }
 
     .conteudo__texto{
@@ -371,7 +368,6 @@ textarea::placeholder{
     }
 
     .conteudo__resultado{
-        padding: 20px;
         height: 30%;
         min-height: 200px;
         width: 100%;
@@ -436,7 +432,7 @@ textarea::placeholder{
 
     .conteudo__logo__estilo__imagem{
         height: 100%;
-        border-radius: 10%;
+        border-radius: 20px;
     }
 
     .conteudo__texto{
@@ -457,7 +453,6 @@ textarea::placeholder{
 
     .conteudo__resultado{
         width: 100%;
-        padding: 10px;
         gap: 32px;
         height: 30%;
         min-height: 200px;
@@ -478,7 +473,7 @@ textarea::placeholder{
         width: 100%;
         max-width: 300px;
         height: 40px;
-        border-radius: 10px;
+        border-radius: 20px;
     }
 
     .conteudo__resultado__instrucoes{
@@ -493,18 +488,10 @@ textarea::placeholder{
     }
 }
 
-@media (max-width: 280px){
+@media (max-width: 280px) or (max-height:625px){
     .cabecalho,
     .conteudo,
     .rodape{
         display: none;
     }
 }
-
-/*
-@media (max-width: 769px) and (max-height: 620px)  {
-    .conteudo__texto{
-        justify-content: start;
-    }
-}
-*/

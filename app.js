@@ -45,18 +45,48 @@ function resetarEstilo(estilo) {
 }
 
 function takePill() {
-    var pill = document.getElementById("pill").alt;
-    console.log(pill)
+    var pill = document.getElementById("takePill").alt;
     
-    if (pill == "Blue_Pill"){
-        document.getElementById("pill").alt = "Red_Pill";
+    if (pill == "Red_Pill"){
+        // Tomando a Pílula Azul
+        document.getElementById("takePill").alt = "Blue_Pill";
+        
+        // Resetando estilo
         resetarEstilo("style_start");
+
+        // Adicionando cores e template original e removendo Digital Rain
         document.getElementById("theme-stylesheet").href = "styles/style_original.css";
+        document.getElementById("theme-stylesheet-color").href = "styles/style_colors_original.css";
+        document.getElementById("matrix").hidden = true;
+        document.getElementById("logo_alura").hidden = false;
+        document.getElementById("logo_one").hidden = true;
+
+        // Imagem resposta original
+        document.getElementById("resultado__logo").src = "assets/Logo_Decodificador_Original.png";
+
+        // Imagem exclamação original
+        document.getElementById("alerta_excalamacao").src = "assets/Exclamation_Circle_Original.png";
+
     }
 
-    if (pill == "Red_Pill"){
-        document.getElementById("pill").alt = "Blue_Pill";
+    if (pill == "Blue_Pill"){
+        // Tomando a Pílula Vermelha
+        document.getElementById("takePill").alt = "Red_Pill";
+
+        // Resetando estilo
         resetarEstilo("style_start");
+
+        // Adicionando cores e template Matrix e adicionando Digital Rain
         document.getElementById("theme-stylesheet").href = "styles/style_matrix.css";
+        document.getElementById("theme-stylesheet-color").href = "styles/style_colors_matrix.css";
+        document.getElementById("matrix").hidden = false;
+        document.getElementById("logo_alura").hidden = true;
+        document.getElementById("logo_one").hidden = false;
+
+    // Imagem resposta Matrix
+        document.getElementById("resultado__logo").src = "assets/Logo_Decodificador_Matrix.jpg";
+
+        // Imagem exclamação Matrix
+        document.getElementById("alerta_excalamacao").src = "assets/Exclamation_Circle_Matrix.png";
     }
 }

@@ -1,26 +1,34 @@
 :root{
     --font-color-cabecalho-rodape: #39ff14;
     --background-cabecalho-rodape: transparent;
-
-    --font-color-input: white;
     --background-main: transparent;
 
+    --background-input: rgb(0, 0, 0, 0.75);
+    --border-input: white;
+    --font-color-input: white;
+    
     --font-color-alert: white;
     
-    --background-resposta: transparent;
+    --background-resposta: rgb(0, 0, 0, 0.75);
     --font-color-resposta: white;
     --font-color-resposta-titulo: white;
     --font-color-resposta-informativo: white;
     
+    --background-criptografar:  rgb(0, 0, 0, 0.75);
     --border-criptografar: #0028ff;
     --font-color-criptografar: #0028ff;
     --background-hover-criptografar: #008cff;
     
+    --background-descriptografar:  rgb(0, 0, 0, 0.75);
     --border-decriptografar: #ff0303;
     --font-color-decriptografar: #ff0303;
     --background-hover-descriptografar: #f59b9b;
 
+    --background-copiar:  transparent;
     --border-copiar: #26ff00;
     --font-color-copiar: #26ff00;
     --background-hover-copiar: #446b21;
+
+    --border-change: #0028ff;
+    --background-hover-change: #008cff;
 }
