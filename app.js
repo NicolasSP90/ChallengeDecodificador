@@ -141,6 +141,10 @@ function takePill() {
         mensagemAlerta = "Essa é uma realidade de verdades duras e dolorosas. Você está liberto da e pode ver a realidade do mundo."
     }
 
+    // Limpar os campos de mensagem
+    document.getElementById("input").value = "";
+    document.getElementById("resposta").innerHTML = "";
+
     // Mensagem do tipo de pílula tomada
     alert(mensagemAlerta)
 }
