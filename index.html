@@ -19,7 +19,7 @@
         <h1 class="cabecalho__titulo">Alura Challenge - Decodificador de Texto</h1>        
     </header>
     
-    <main class="conteudo">
+    <main class="conteudo" id="conteudo">
         <div class="conteudo__logo">
             <div class="conteudo__logo__icones">
                 <img class="conteudo__logo__icones__one" id="logo_one" src="assets/logo_one.svg" alt="Logo_ONE">
@@ -27,7 +27,7 @@
                 <img class="conteudo__logo__icones__alura" id="logo_alura" src="assets/logo_alura.png" alt="Logo_Alura" hidden>
             </div>
 
-            <button onclick="takePill()" class="conteudo__logo__estilo">
+            <button onclick="takePill()" class="conteudo__logo__estilo" id="logo_estilo">
                 <img class="conteudo__logo__estilo__imagem" id="takePill" src="assets/morpheus_pills.png" alt="Red_Pill">
             
             </button>           
@@ -41,9 +41,9 @@
                 <p class="conteudo__texto__alerta__texto">Acentos serão removidos.</p>
             </div>
             <div class="conteudo__texto__botoes">
-                <button onclick="criptografar()" class="conteudo__texto__botoes__criptografar">Criptografar</button>
+                <button type="button" onclick="criptografar()" class="conteudo__texto__botoes__criptografar" id="criptografar">Criptografar</button>
 
-                <button onclick="descriptografar()" class="conteudo__texto__botoes__descriptografar">Descriptografar</button>
+                <button type="button" onclick="descriptografar()" class="conteudo__texto__botoes__descriptografar" id="descriptografar">Descriptografar</button>
             </div>
         </section>
         
@@ -58,9 +58,15 @@
                 <p class="conteudo__resultado__instrucoes__texto">Digite um texto que você deseja criptografar ou descriptografar.</p>
             </div>
 
-            <button onclick="copiarEresetar()" class="conteudo__resultado__botao" id="copiar">Copiar</button>
+            <button type="button" onclick="copiarEresetar()" class="conteudo__resultado__botao" id="copiar">Copiar</button>
         </section>
     </main>
+
+    <div class="conteudo__alerta_estilos" id="alerta_estilos">
+        <p class="conteudo__alerta_estilos__texto" id="alerta_estilos_texto"></p>
+
+        <button onclick="removerAlerta()" class="conteudo__alerta_estilos__botao" id="alerta_botao"></button>
+    </div>
     
     <footer class="rodape">
         <a class="rodape__texto" href="https://github.com/NicolasSP90">Desenvolvido por Nícolas Sartor Parisotto | 2024</a>

@@ -125,7 +125,10 @@ function takePill() {
         elementosEstilos("original", false, true);
         
         // Mensagem para a janela
-        mensagemAlerta = "Essa é uma realidade de ignorância abençoada. Esqueça o que sabe e se contente com a realidade."
+        document.getElementById("alerta_estilos_texto").innerHTML = "Essa é uma realidade de ignorância abençoada.<br>Esqueça o que sabe e se contente com a realidade.<br>Quando acordar, não vai se lembrar de mais nada."
+
+        // Mensagem do botão
+        document.getElementById("alerta_botao").innerHTML = "Pílula Azul"
     }
 
     // Se o elemento for "Blue_Pill"
@@ -138,7 +141,10 @@ function takePill() {
         elementosEstilos("matrix", true, false);
 
         // Mensagem para a janela
-        mensagemAlerta = "Essa é uma realidade de verdades duras e dolorosas. Você está liberto da e pode ver a realidade do mundo."
+        document.getElementById("alerta_estilos_texto").innerHTML = "Essa é uma realidade de verdades duras e dolorosas.<br>Você está liberto e pode ver a realidade do mundo."
+
+        // Mensagem do botão
+        document.getElementById("alerta_botao").innerHTML = "Pílula Vermelha"
     }
 
     // Limpar os campos de mensagem
@@ -146,7 +152,8 @@ function takePill() {
     document.getElementById("resposta").innerHTML = "";
 
     // Mensagem do tipo de pílula tomada
-    alert(mensagemAlerta)
+    document.getElementById("alerta_estilos").style.display = "flex";
+    botoesOnOff(true);
 }
 
 function elementosEstilos(estilo, estilo_matrix, estilo_original){
@@ -166,4 +173,17 @@ function elementosEstilos(estilo, estilo_matrix, estilo_original){
     
     // Imagem exclamação original
     document.getElementById("alerta_excalamacao").src = `assets/exclamation_circle_${estilo}.png`;
+}
+
+function removerAlerta() {
+    document.getElementById("alerta_estilos").style.display = "none";
+    botoesOnOff(false);
+}
+
+function botoesOnOff(balorBooleano){
+    document.getElementById("criptografar").disabled = balorBooleano;
+    document.getElementById("descriptografar").disabled = balorBooleano;
+    document.getElementById("copiar").disabled = balorBooleano;
+    document.getElementById("input").disabled = balorBooleano;
+    document.getElementById("logo_estilo").disabled = balorBooleano;
 }

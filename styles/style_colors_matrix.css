@@ -1,6 +1,6 @@
 :root{
     --font-color-cabecalho-rodape: #39ff14;
-    --background-cabecalho-rodape: transparent;
+    --background-cabecalho-rodape: rgb(0, 0, 0, 0.75);
     --background-main: transparent;
 
     --background-input: rgb(0, 0, 0, 0.75);
@@ -22,8 +22,8 @@
     --background-hover-criptografar: #008cff;
     
     --background-descriptografar:  rgb(0, 0, 0, 0.75);
-    --border-decriptografar: #ff0303;
-    --font-color-decriptografar: #ff0303;
+    --border-descriptografar: #ff0303;
+    --font-color-descriptografar: #ff0303;
     --background-hover-descriptografar: #f59b9b;
 
     --background-copiar:  transparent;
@@ -33,4 +33,10 @@
 
     --border-change: #0028ff;
     --background-hover-change: #008cff;
+
+    --background-alert: rgb(0, 0, 0, 0.9);
+    --border-alert: #26ff00;
+    --font-color-alert: #26ff00;
+    --font-color-button-alert: #ff0303;
+    --background-hover-alert: #f59b9b;
 }

@@ -2,6 +2,14 @@
 
 :root{    
     --font-main: 'Inter', sans-serif;
+
+    --alert-tamanho-altura-1: 310px;
+    --alert-tamanho-largura-1: 60%;
+
+    --font-size-1: 32px;
+    --font-size-2: 24px;
+    --font-size-3: 16px;
+    --font-size-4: 12px;
 }
 
 *{
@@ -19,12 +27,13 @@
     justify-content: center;
     align-items: center;
     background-color: var(--background-cabecalho-rodape);
+    z-index: 0;
 }
 
 .cabecalho__titulo{
     font-family: var(--font-main);
     color: var(--font-color-cabecalho-rodape);
-    font-size: 32px;
+    font-size: var(--font-size-1);
 }
 
 .conteudo{
@@ -32,6 +41,7 @@
     box-sizing: border-box;
     background-color: var(--background-main);
     display: flex;
+    z-index: 0;
 }
 
 .conteudo__logo{
@@ -71,7 +81,7 @@
 .conteudo__texto__input{
     background: var(--background-input);
     font-family: var(--font-main);
-    font-size: 32px;
+    font-size: var(--font-size-1);
     color: var(--font-color-input);
     width: 100%;
     border: 1px solid var(--border-input);
@@ -103,7 +113,7 @@ textarea::placeholder{
 .conteudo__texto__alerta__texto{
     font-family: var(--font-main);
     color: var(--font-color-alert);
-    font-size: 12px;
+    font-size: var(--font-size-4);
     height: 100%
 }
 
@@ -118,7 +128,7 @@ textarea::placeholder{
 .conteudo__texto__botoes__criptografar,
 .conteudo__texto__botoes__descriptografar,
 .conteudo__resultado__botao{
-    font-size: 16px;
+    font-size: var(--font-size-3);
     font-family: var(--font-main);
     border-radius: 20px;
     width: 330px;
@@ -143,9 +153,9 @@ textarea::placeholder{
 }
 
 .conteudo__texto__botoes__descriptografar{
-    color: var(--font-color-decriptografar);
+    color: var(--font-color-descriptografar);
     background: var(--background-descriptografar);
-    border: 1px solid var(--border-decriptografar);
+    border: 1px solid var(--border-descriptografar);
 }
 
 .conteudo__texto__botoes__descriptografar:hover{
@@ -177,7 +187,7 @@ textarea::placeholder{
 .conteudo__resultado__resposta{
     background-color: transparent;
     font-family: var(--font-main);
-    font-size: 24px;
+    font-size: var(--font-size-2);
     color: var(--font-color-resposta);
     width: 100%;
     height: 100%;
@@ -198,7 +208,7 @@ textarea::placeholder{
 
 .conteudo__resultado__instrucoes__titulo{
     font-family: var(--font-main);
-    font-size: 24px;
+    font-size: var(--font-size-2);
     color: var(--font-color-resposta-informativo);
     line-height: 120%;
     text-align: center;
@@ -207,7 +217,7 @@ textarea::placeholder{
 .conteudo__resultado__instrucoes__texto{
     font-family: var(--font-main);
     color: var(--font-color-resposta-titulo);
-    font-size: 16px;
+    font-size: var(--font-size-3);
     line-height: 150%;
     text-align: center;
 }
@@ -224,6 +234,48 @@ textarea::placeholder{
     transition: background-color 1s;
 }
 
+.conteudo__alerta_estilos{
+    z-index: 1;
+    position: absolute;
+    height: fit-content;
+    background-color: var(--background-alert);
+    border-radius: 20px;
+    border: 1px solid var(--border-alert);
+    display: none;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+    padding: 40px;
+    gap: 20px
+}
+
+.conteudo__alerta_estilos__texto,
+.conteudo__alerta_estilos__botao{
+    font-family: var(--font-main);
+    font-size: var(--font-size-1);
+}
+
+.conteudo__alerta_estilos__texto{
+    color: var(--font-color-alert);
+    text-align: center;
+}
+
+.conteudo__alerta_estilos__botao{
+    border: 1px solid var(--border-alert);
+    border-radius: 20px;
+    width: fit-content;
+    height: fit-content;
+    padding: 10px;
+    background-color: transparent;
+    color: var(--font-color-button-alert);
+}
+
+.conteudo__alerta_estilos__botao:hover{
+    background-color: var(--background-hover-alert);
+    opacity: 0.75;
+    transition: background-color 1s;
+}
+
 .rodape{
     height: 50px;
     width: 100%;
@@ -231,14 +283,15 @@ textarea::placeholder{
     background-color: var(--background-cabecalho-rodape);
     display: flex;
     justify-content: center;
-    align-items: center; 
+    align-items: center;
+    z-index: 0;
 }
 
 .rodape__texto{
     text-decoration: none;
     font-family: var(--font-main);
     color: var(--font-color-cabecalho-rodape);
-    font-size: 16px;
+    font-size: var(--font-size-3);
     cursor: pointer;
 }
 
@@ -302,6 +355,16 @@ textarea::placeholder{
 
     .conteudo__resultado__botao{
         width: 100%;
+    }
+
+    .conteudo__alerta_estilos{
+        width: 900px;
+        height: fit-content;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        margin: auto;
     }
 }
 
@@ -375,6 +438,16 @@ textarea::placeholder{
     .conteudo__resultado__botao{
         width: 330px;
     }
+
+    .conteudo__alerta_estilos{
+        width: 500px;
+        height: fit-content;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        margin: auto;
+    }
 }
 
 @media (max-width:1439px) and (min-width: 770px) and (max-height: 620px)  {
@@ -391,7 +464,7 @@ textarea::placeholder{
     }
 
     .cabecalho__titulo{
-        font-size: 16px;
+        font-size: var(--font-size-3);
     }
 
     .conteudo{
@@ -433,7 +506,7 @@ textarea::placeholder{
     .conteudo__texto__input{
         height: 100%;
         min-height: 100px;
-        font-size: 16px;
+        font-size: var(--font-size-3);
     }
 
     .conteudo__texto__botoes{
@@ -449,7 +522,7 @@ textarea::placeholder{
     }
 
     .conteudo__resultado__resposta{
-        font-size: 16px;
+        font-size: var(--font-size-3);
     }
 
     .conteudo__resultado__logo{
@@ -468,12 +541,27 @@ textarea::placeholder{
     .conteudo__resultado__instrucoes{
         height: 69px;
     }
+
+    .conteudo__alerta_estilos__botao,
+    .conteudo__alerta_estilos__texto{
+        font-size: var(--font-size-3);
+    }
+
+    .conteudo__alerta_estilos{
+        width: 250px;
+        height: fit-content;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        margin: auto;
+    }
 }
 
 @media (max-width: 380px){
     .cabecalho__titulo,
     .rodape__texto{
-        font-size: 12px;
+        font-size: var(--font-size-4);
     }
 }
 

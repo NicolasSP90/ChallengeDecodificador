@@ -22,15 +22,21 @@
     --background-hover-criptografar: #757FB2;
     
     --background-descriptografar:  #D8DFE8;
-    --border-decriptografar: #0A3871;
-    --font-color-decriptografar: #0A3871;
+    --border-descriptografar: #0A3871;
+    --font-color-descriptografar: #0A3871;
     --background-hover-descriptografar: #757FB2;
 
     --background-copiar:  transparent;
     --border-copiar: #0A3871;
     --font-color-copiar: #0A3871;
-    --background-hover-copiar: #757FB2;
+    --background-hover-copiar: #757fb2;
 
     --border-change: #ff0303;
     --background-hover-change: #f59b9b;
+
+    --background-alert: rgb(117, 127, 179, 1);
+    --border-alert: #0A3871;
+    --font-color-alert: #0A3871;
+    --font-color-button-alert: #0028ff;
+    --background-hover-alert: #008cff;
 }
