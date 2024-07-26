@@ -37,6 +37,9 @@
     --background-alert: rgb(0, 0, 0, 0.9);
     --border-alert: #26ff00;
     --font-color-alert: #26ff00;
-    --font-color-button-alert: #ff0303;
-    --background-hover-alert: #f59b9b;
+    --font-color-button-alert-vermelha: #ff0303;
+    --background-hover-alert-vermelha: #f59b9b;
+    --font-color-button-alert-azul: #0028ff;
+    --background-hover-alert-azul: #008cff;
+    --shadow-alert: rgb(38, 255, 0, 0.75);
 }

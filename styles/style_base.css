@@ -62,11 +62,11 @@
     opacity: 0.75;
     border: 1px solid var(--border-change);
     border-radius: 20px;
+    transition: background-color 1s;
 }
 
 .conteudo__logo__estilo__imagem:hover{
     background-color: var(--background-hover-change);
-    transition: background-color 1s;
 }
 
 .conteudo__texto{
@@ -138,6 +138,7 @@ textarea::placeholder{
     align-items: center;
     justify-content: center;
     cursor: pointer;
+    transition: background-color 1s;
 }
 
 .conteudo__texto__botoes__criptografar{
@@ -149,7 +150,6 @@ textarea::placeholder{
 .conteudo__texto__botoes__criptografar:hover{
     background-color: var(--background-hover-criptografar);
     opacity: 0.75;
-    transition: background-color 1s;
 }
 
 .conteudo__texto__botoes__descriptografar{
@@ -161,7 +161,6 @@ textarea::placeholder{
 .conteudo__texto__botoes__descriptografar:hover{
     background-color: var(--background-hover-descriptografar);
     opacity: 0.75;
-    transition: background-color 1s;
 }
 
 .conteudo__resultado{
@@ -231,13 +230,13 @@ textarea::placeholder{
 .conteudo__resultado__botao:hover{
     background-color: var(--background-hover-copiar);
     opacity: 0.75;
-    transition: background-color 1s;
 }
 
 .conteudo__alerta_estilos{
     z-index: 1;
     position: absolute;
     height: fit-content;
+    max-height: 100vh;
     background-color: var(--background-alert);
     border-radius: 20px;
     border: 1px solid var(--border-alert);
@@ -246,34 +245,73 @@ textarea::placeholder{
     align-items: center;
     flex-direction: column;
     padding: 40px;
-    gap: 20px
-}
-
-.conteudo__alerta_estilos__texto,
-.conteudo__alerta_estilos__botao{
-    font-family: var(--font-main);
-    font-size: var(--font-size-1);
+    gap: 20px;
+    overflow: auto;
+    box-shadow: 0px 2px 5px 0px var(--shadow-alert);
 }
 
 .conteudo__alerta_estilos__texto{
+    font-family: var(--font-main);
+    font-size: var(--font-size-1);
     color: var(--font-color-alert);
     text-align: center;
+    overflow: auto;
 }
 
-.conteudo__alerta_estilos__botao{
+.conteudo__alerta_estilos__botoes{
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: fit-content;
+    height: fit-content;
+    gap: 10px;
+    padding: 10px;
+}
+
+.conteudo__alerta_estilos__botao__azul,
+.conteudo__alerta_estilos__botao__vermelha,
+.conteudo__alerta_estilos__botao_ok{
+    font-family: var(--font-main);
+    font-size: var(--font-size-1);
     border: 1px solid var(--border-alert);
     border-radius: 20px;
-    width: fit-content;
+    width: 260px;
     height: fit-content;
     padding: 10px;
     background-color: transparent;
-    color: var(--font-color-button-alert);
+    transition: background-color 1s;
+    cursor: pointer;
 }
 
-.conteudo__alerta_estilos__botao:hover{
-    background-color: var(--background-hover-alert);
+.conteudo__alerta_estilos__botao__vermelha{
+    color: var(--font-color-button-alert-vermelha);
+}
+
+.conteudo__alerta_estilos__botao__vermelha:hover{
+    background-color: var(--background-hover-alert-vermelha);
+    opacity: 0.75;   
+}
+
+.conteudo__alerta_estilos__botao__azul{
+    color: var(--font-color-button-alert-azul);
+}
+
+.conteudo__alerta_estilos__botao__azul:hover{
+    background-color: var(--background-hover-alert-azul);
     opacity: 0.75;
-    transition: background-color 1s;
+}
+
+.conteudo__alerta_estilos__botao_ok{
+    color: var(--font-color-copiar);
+    display: none;
+    align-items: center;
+    justify-content: center;
+}
+
+.conteudo__alerta_estilos__botao_ok:hover{
+    background-color: var(--background-hover-copiar);
+    opacity: 0.75;
 }
 
 .rodape{
@@ -448,6 +486,10 @@ textarea::placeholder{
         left: 0;
         margin: auto;
     }
+
+    .conteudo__alerta_estilos__texto{
+        font-size: var(--font-size-2);
+    }
 }
 
 @media (max-width:1439px) and (min-width: 770px) and (max-height: 620px)  {
@@ -542,7 +584,8 @@ textarea::placeholder{
         height: 69px;
     }
 
-    .conteudo__alerta_estilos__botao,
+    .conteudo__alerta_estilos__botao__vermelha,
+    .conteudo__alerta_estilos__botao__azul,
     .conteudo__alerta_estilos__texto{
         font-size: var(--font-size-3);
     }
@@ -555,6 +598,12 @@ textarea::placeholder{
         bottom: 0;
         left: 0;
         margin: auto;
+    }
+
+    .conteudo__alerta_estilos__botao__azul,
+    .conteudo__alerta_estilos__botao__vermelha,
+    .conteudo__alerta_estilos__botao_ok{
+        width: 150px;
     }
 }
 

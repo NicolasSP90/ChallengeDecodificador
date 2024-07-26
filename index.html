@@ -27,7 +27,7 @@
                 <img class="conteudo__logo__icones__alura" id="logo_alura" src="assets/logo_alura.png" alt="Logo_Alura" hidden>
             </div>
 
-            <button onclick="takePill()" class="conteudo__logo__estilo" id="logo_estilo">
+            <button onclick="escolherPilula()" class="conteudo__logo__estilo" id="logo_estilo">
                 <img class="conteudo__logo__estilo__imagem" id="takePill" src="assets/morpheus_pills.png" alt="Red_Pill">
             
             </button>           
@@ -64,8 +64,14 @@
 
     <div class="conteudo__alerta_estilos" id="alerta_estilos">
         <p class="conteudo__alerta_estilos__texto" id="alerta_estilos_texto"></p>
+        <div class="conteudo__alerta_estilos__botoes" id="alerta_estilos__botoes">
+            <button onclick="tomarPilula('Pílula Vermelha')" class="conteudo__alerta_estilos__botao__vermelha" id="pilula_vermelha">Pílula Vermelha</button>
+            <!-- <button onclick="tomarPilula()" class="conteudo__alerta_estilos__botao" id="alerta_botao"></button> -->
 
-        <button onclick="removerAlerta()" class="conteudo__alerta_estilos__botao" id="alerta_botao"></button>
+            <button onclick="tomarPilula('Pílula Azul')" class="conteudo__alerta_estilos__botao__azul" id="pilula_azul">Pílula Azul</button>
+        </div>
+
+        <button onclick="fecharAlerta()" class="conteudo__alerta_estilos__botao_ok" id="botao_ok">OK</button>
     </div>
     
     <footer class="rodape">

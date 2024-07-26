@@ -19,12 +19,20 @@ function criptografar() {
     resetarEstilo("style_answer", false, true);
 }
 
+
 // Função de Desriptografar
 function descriptografar() {
+
+    // Salvar os elementos do campo "input"
     textoNomal = document.getElementById("input").value;
+
+    // Atribuir a mensagem manipulada ao campo "resposta"
     document.getElementById("resposta").innerHTML = mudarString(listaChaves, listaLetras, "Descriptografar");
+
+    // Resetar estilo
     resetarEstilo("style_answer", false, true);
 }
+
 
 // Função de Copiar e Resetar
 function copiarEresetar() {
@@ -43,12 +51,16 @@ function copiarEresetar() {
     resetarEstilo("style_start", true, false);
 
     // Mensagem informativa
-
-    document.getElementById("alerta_botao").innerHTML = "OK"
-    botoesOnOff(true)
-    document.getElementById("alerta_estilos_texto").innerHTML = "O texto foi copiado!"
+    botoesDesabilitados(true)
+    
     document.getElementById("alerta_estilos").style.display = "flex";
+
+    document.getElementById("botao_ok").style.display = "flex";
+    
+    document.getElementById("alerta_estilos_texto").innerHTML = "O texto foi copiado!"
+    
 }
+
 
 // Função de manipulação de string
 function mudarString(listaAlterar, listaRegra, acao){
@@ -99,6 +111,7 @@ function mudarString(listaAlterar, listaRegra, acao){
     return novoTexto;
 }
 
+
 // Função para alterar a estilização inicial <-> resposta
 function resetarEstilo(estilo, resposta_oculta, inicio_oculto) {
 
@@ -112,52 +125,85 @@ function resetarEstilo(estilo, resposta_oculta, inicio_oculto) {
     document.getElementById("resultado__logo").hidden = inicio_oculto;
 }
 
-// Função para tomar a pílula e decidir em que realidade vai ser trabalhado
-function takePill() {
 
-    // Armazena o elemento alt da imagem
-    var pill = document.getElementById("takePill").alt;
-    
-    // Se o elemento for "Red_Pill"
-    if (pill == "Red_Pill"){
-        
-        // Tomar a Pílula Azul
-        document.getElementById("takePill").alt = "Blue_Pill";
+// Função para tomar a pílula e decidir em que realidade vai ser trabalhado
+function escolherPilula() {
+
+    // Desabilitar botões
+    botoesDesabilitados(true)
+
+    // Limpar os campos de mensagem
+    document.getElementById("input").value = "";
+    document.getElementById("resposta").innerHTML = "";
+
+    // Atribuindo texto
+    document.getElementById("alerta_estilos_texto").innerHTML = "Esta é a sua última chance. Então você não será capaz de recuar. Se você tomar a pílula azul, fim da história: você vai acordar em sua cama e acreditar no que quiser. Se você pegar a vermelha, estará no país das maravilhas, e eu mostrarei a você até onde vai a toca do coelho. Lembre-se de que a única coisa que ofereço é a verdade, nada mais.";
+
+    // Mostrar alerta
+    document.getElementById("alerta_estilos").style.display = "flex";
+
+    // Mostrar botões de pílulas
+    document.getElementById("alerta_estilos__botoes").style.display = "flex";
+}
+
+
+function tomarPilula(cor) {
+
+    // Escolhendo a Pílula Azul
+    if (cor == "Pílula Azul"){
 
         // Alterar estilo para uma realidade de ignorância abençoada (sem conhecimento da matrix)
         elementosEstilos("original", false, true);
         
         // Mensagem para a janela
         document.getElementById("alerta_estilos_texto").innerHTML = "Essa é uma realidade de ignorância abençoada.<br>Esqueça o que sabe e se contente com a realidade.<br>Quando acordar, não vai se lembrar de mais nada."
-
-        // Mensagem do botão
-        document.getElementById("alerta_botao").innerHTML = "Pílula Azul"
     }
 
-    // Se o elemento for "Blue_Pill"
-    if (pill == "Blue_Pill"){
-        
-        // Tomar a Pílula Vermelha
-        document.getElementById("takePill").alt = "Red_Pill";
+    // Escolhendo a Pílula Vermelha
+    if (cor == "Pílula Vermelha"){
         
         // Alterar estilo para uma realidade onde se abraça a verdade dura e dolorosa (conhecimento da matrix)
         elementosEstilos("matrix", true, false);
 
         // Mensagem para a janela
         document.getElementById("alerta_estilos_texto").innerHTML = "Essa é uma realidade de verdades duras e dolorosas.<br>Você está liberto e pode ver a realidade do mundo."
-
-        // Mensagem do botão
-        document.getElementById("alerta_botao").innerHTML = "Pílula Vermelha"
     }
 
-    // Limpar os campos de mensagem
-    document.getElementById("input").value = "";
-    document.getElementById("resposta").innerHTML = "";
+    // Ocultar botões de pílulas
+    document.getElementById("alerta_estilos__botoes").style.display = "none";
 
-    // Mensagem do tipo de pílula tomada
-    document.getElementById("alerta_estilos").style.display = "flex";
-    botoesOnOff(true);
+    // Mostrar botão OK
+    document.getElementById("botao_ok").style.display = "flex";
 }
+
+
+function fecharAlerta(){
+
+    // Esconder OK
+    document.getElementById("botao_ok").style.display = "none";
+
+    // Esconder alerta
+    document.getElementById("alerta_estilos").style.display = "none";
+
+    // Limpar mensagem
+    document.getElementById("alerta_estilos_texto").innerHTML = "";
+
+
+    // Liberar botões
+    botoesDesabilitados(false);
+}
+
+
+function botoesDesabilitados(balorBooleano){
+    
+    // Função para desabilitar elementos (true = desabilitado)
+    document.getElementById("criptografar").disabled = balorBooleano;
+    document.getElementById("descriptografar").disabled = balorBooleano;
+    document.getElementById("copiar").disabled = balorBooleano;
+    document.getElementById("input").disabled = balorBooleano;
+    document.getElementById("logo_estilo").disabled = balorBooleano;
+}
+
 
 function elementosEstilos(estilo, estilo_matrix, estilo_original){
 
@@ -176,17 +222,4 @@ function elementosEstilos(estilo, estilo_matrix, estilo_original){
     
     // Imagem exclamação original
     document.getElementById("alerta_excalamacao").src = `assets/exclamation_circle_${estilo}.png`;
-}
-
-function removerAlerta() {
-    document.getElementById("alerta_estilos").style.display = "none";
-    botoesOnOff(false);
-}
-
-function botoesOnOff(balorBooleano){
-    document.getElementById("criptografar").disabled = balorBooleano;
-    document.getElementById("descriptografar").disabled = balorBooleano;
-    document.getElementById("copiar").disabled = balorBooleano;
-    document.getElementById("input").disabled = balorBooleano;
-    document.getElementById("logo_estilo").disabled = balorBooleano;
 }
