@@ -43,7 +43,11 @@ function copiarEresetar() {
     resetarEstilo("style_start", true, false);
 
     // Mensagem informativa
-    alert("O texto foi copiado!");
+
+    document.getElementById("alerta_botao").innerHTML = "OK"
+    botoesOnOff(true)
+    document.getElementById("alerta_estilos_texto").innerHTML = "O texto foi copiado!"
+    document.getElementById("alerta_estilos").style.display = "flex";
 }
 
 // Função de manipulação de string
@@ -113,7 +117,6 @@ function takePill() {
 
     // Armazena o elemento alt da imagem
     var pill = document.getElementById("takePill").alt;
-    let mensagemAlerta;
     
     // Se o elemento for "Red_Pill"
     if (pill == "Red_Pill"){
