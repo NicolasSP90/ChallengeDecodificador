@@ -112,7 +112,7 @@ textarea::placeholder{
 
 .conteudo__texto__alerta__texto{
     font-family: var(--font-main);
-    color: var(--font-color-alert);
+    color: var(--font-color-resposta-titulo);
     font-size: var(--font-size-4);
     height: 100%
 }
