@@ -1,10 +1,18 @@
 iframe{
     height: 100%;
+    min-height: 556px;
     position: absolute;
     top: 0;
     left: 0;
     z-index: -1;
     pointer-events: none;
+}
+
+/* Desktop */
+@media (min-width:1440px){
+    iframe{
+        min-height: 390px;
+    }
 }
 
 /*Tablet*/
@@ -16,8 +24,47 @@ iframe{
 
 /*Smartphone*/
 @media (max-width: 769px) {
-
     .conteudo{
         padding: 0px 10px 0px;
     }
+}
+
+@media (max-width: 380px){
+    iframe{
+        min-width: 280px;
+    }
+}
+
+@media (max-width: 769px) and (max-height: 656px){
+    .conteudo{
+        min-height: 460px;
+        justify-content: start;
+        overflow: auto;
+        gap:5px;
+    }
+
+    .conteudo__texto__input{
+        min-height: 80px;
+    }
+
+    .conteudo__resultado{
+        min-height: 140px;
+    }
+
+    .conteudo__resultado__instrucoes{
+        height: fit-content;
+    }
+
+    .conteudo__resultado__instrucoes__titulo{
+        font-size: var(--font-size-3);
+    }
+
+    .conteudo__resultado__instrucoes__texto{
+        font-size: var(--font-size-4);
+    }
+
+    .conteudo__resultado__resposta{
+        font-size: var(--font-size-3);
+    }
+
 }
