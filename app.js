@@ -100,8 +100,12 @@ function mudarString(listaAlterar, listaRegra, acao){
     // Percorrendo cada elemento da lista (frase)
     for (i=0; i < novoTexto.length; i++){
 
-        // Substituindo o elemento pela soma entre o primeiro caractere maiusculo + string cortada a partir do segundo elemento
-        novoTexto[i] = novoTexto[i][0].toUpperCase() + novoTexto[i].slice(1);
+        // Como normalmente o parágrafo termina em ponto final, é criado uma string vazia nessa condição, como último elemento da lista.
+        // Evitar esse elemento
+        if (novoTexto[i] != ""){
+            // Substituindo o elemento pela soma entre o primeiro caractere maiusculo + string cortada a partir do segundo elemento
+            novoTexto[i] = novoTexto[i][0].toUpperCase() + novoTexto[i].slice(1);
+        }
     }
 
     // Unindo os elementos da lista em uma única string com formatação de texto
