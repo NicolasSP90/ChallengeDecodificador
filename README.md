@@ -6,6 +6,8 @@
 ![Vscode](https://img.shields.io/badge/Vscode-007ACC?style=for-the-badge&logo=visual-studio-code&logoColor=white)
 ![LiveServer](https://img.shields.io/badge/LiveServer-purple?style=for-the-badge&logo=visual-studio-code&logoColor=white)
 
+---
+
 <h1>Oracle Next Education - Challenge - Decodificador de Texto</h1>
 
 <h2>Sobre o Desafio</h2>
